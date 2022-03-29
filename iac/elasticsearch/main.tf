@@ -23,6 +23,8 @@ module "aws_es" {
 
   cluster_config = {
     dedicated_master_enabled = "true"
+    cluster_config_dedicated_master_count = 2
+    cluster_config_dedicated_master_type = "t3.small.elasticsearch"
     instance_count           = "2"
     instance_type            = "t3.small.elasticsearch"
     zone_awareness_enabled   = "true"
